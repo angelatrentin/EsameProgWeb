@@ -1,16 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task Manager</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-    <h1>Task Manager</h1>
-    <input type="text" id="taskInput" placeholder="Nuovo task" />
-    <button id="addBn"> Aggiungi </button>
-    <ul id="Tasklist"></ul>
+
+    <section class="versione base">
+        <div class="container">
+            <h2>Task Manager | versione base</h2>
+            <input type="text" id="taskInputBase" placeholder="Nuova attività" />
+            <button onclick="aggiungiAttivitaBase()"> Aggiungi </button>
+            <ul id="listaAttivitaBase"></ul>
+        </div>
+    </section>
+
     <script src="app.js"></script>
 </body>
 </html>

@@ -1,14 +1,33 @@
-const taskInput = document.getElementById('taskInput');
-const addBtn = document.getElementById('addBtn');
-const taskList = document.getElementById('taskList');
+// VERSIONE BASE
+let attivitaBase = [];
 
-addBtn.addEventListener('click', () => {
-  const taskText = taskInput.value.trim();
-  if (taskText !== '') {
-    const li = document.createElement('li');
-    li.textContent = taskText;
-    li.addEventListener('click', () => li.remove());
-    taskList.appendChild(li);
-    taskInput.value = '';
+function aggiornaListaBase() {
+  const lista = document.getElementById("listaAttivitaBase");
+  lista.innerHTML = "";
+  attivitaBase.forEach((item, index) => {
+    const li = document.createElement("li");
+    li.textContent = item.nome;
+
+    const btnRimuovi = document.createElement("button");
+    btnRimuovi.textContent = "X";
+    btnRimuovi.onclick = () => rimuoviAttivitaBase(index);
+
+    li.appendChild(btnRimuovi);
+    lista.appendChild(li);
+  });
+}
+
+function aggiungiAttivitaBase() {
+  const input = document.getElementById("taskInputBase");
+  const nome = input.value.trim();
+  if (nome !== "") {
+    attivitaBase.push({ nome });
+    input.value = "";
+    aggiornaListaBase();
   }
-});
+}
+
+function rimuoviAttivitaBase(index) {
+  attivitaBase.splice(index, 1);
+  aggiornaListaBase();
+}
