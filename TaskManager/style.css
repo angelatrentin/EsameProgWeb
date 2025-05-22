@@ -1,7 +1,82 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-}
-#tasklist li {
-    margin: 5px 0;
-}
+/* Reset di base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 2rem;
+    line-height: 1.6;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+  }
+  
+  /* Container principale */
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Input e pulsante */
+  input[type="text"] {
+    width: 70%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 0.5rem;
+    font-size: 1rem;
+  }
+  
+  button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Lista attività */
+  ul {
+    list-style-type: none;
+    margin-top: 1.5rem;
+  }
+  
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ecf0f1;
+    padding: 0.5rem 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  li button {
+    background-color: #e74c3c;
+    padding: 0.3rem 0.6rem;
+    font-size: 0.9rem;
+  }
+  
+  li button:hover {
+    background-color: #c0392b;
+  }
