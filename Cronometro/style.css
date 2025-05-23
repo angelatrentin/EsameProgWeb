@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212;
+    color: #fff;
+    line-height: 1.6;
+    padding: 2rem;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #00ffe1;
+    font-weight: 600;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #1e1e1e;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 255, 225, 0.1);
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+  }
+
+  #displayBase,
+  #displayAvanzato {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    color: #00ffe1;
+    letter-spacing: 2px;
+    user-select: none;
+  }
+  
+  .buttons button {
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    margin: 0 0.3rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    background-color: #00ffe1;
+    color: #121212;
+  }
+  
+  .buttons button:hover {
+    background-color: #00ccbb;
+    transform: scale(1.05);
+  }
+
+  #giriList li {
+    background-color: #2a2a2a;
+    padding: 0.7rem 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 6px rgba(0, 255, 225, 0.1);
+    transition: background-color 0.3s ease;
+  }
+  
+  #giriList li:hover {
+    background-color: #333333;
+  }
+  
+  .versione {
+    padding: 2rem 0;
+  }
+  
+  .base {
+    background-color: #1a1a1a;
+    border-bottom: 1px solid #333;
+  }
+  
