@@ -16,6 +16,22 @@
         </div>
     </section>
 
+    <section class="versione avanzata">
+        <div class="container">
+          <h2>Task Manager | versione avanzata</h2>
+          <input type="text" id="taskInputAvanzato" placeholder="Nuova attività" />
+          <button onclick="aggiungiAttivitaAvanzato()">Aggiungi</button>
+          <select id="filtroStato" onchange="filtraPerStato()">
+            <option value="">Tutti</option>
+            <option value="Da fare">Da fare</option>
+            <option value="In corso">In corso</option>
+            <option value="Completata">Completata</option>
+          </select>
+          <input type="text" id="cercaInput" placeholder="Cerca..." oninput="cercaAttivita()" />
+          <ul id="listaAttivitaAvanzato"></ul>
+        </div>
+      </section>
+
     <script src="app.js"></script>
 </body>
 </html>
