@@ -23,8 +23,8 @@ async function getMeteoBase() {
   
   // VERSIONE AVANZATA
   async function getMeteoAvanzato(lat, lon) {
-    const url = `https://api.open-meteo.com/v1/forecast?latitude= ${lat}&longitude=${lon}&current=temperature_2m,relative_humidity_2m,precipitation,wind_speed_10m,weather_code`;
-  
+    const url = "https://api.open-meteo.com/v1/forecast?latitude=46.071808&longitude=11.5965952&current=temperature_2m ,relative_humidity_2m,precipitation,wind_speed_10m,weather_code";
+    
     try {
       const res = await fetch(url);
       const dati = await res.json();
