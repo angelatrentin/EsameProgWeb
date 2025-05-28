@@ -48,6 +48,28 @@ function aggiornaListaAvanzata(filtro = null) {
   daMostrare.forEach((item, index) => {
     const div = document.createElement("div");
 
+    const inputNome = document.createElement("input");
+    inputNome.type = "text";
+    inputNome.value = item.nome;
+    inputNome.disabled = true;
+
+    const btnModifica = document.createElement("button");
+    btnModifica.textContent = "Modifica";
+    btnModifica.onclick = () => {
+      if (inputNome.disabled) {
+        inputNome.disabled = false;
+        btnModifica.textContent = "Salva";
+      } else {
+        item.nome = inputNome.value.trim();
+        inputNome.disabled = true;
+        btnModifica.textContent = "Modifica";
+        aggiornaListaAvanzata(document.getElementById("filtroStato").value);
+      }
+    };
+
+    div.appendChild(inputNome);
+    div.appendChild(btnModifica);
+
     const select = document.createElement("select");
     stati.forEach(s => {
       const opt = document.createElement("option");
@@ -62,8 +84,8 @@ function aggiornaListaAvanzata(filtro = null) {
       aggiornaListaAvanzata(document.getElementById("filtroStato").value);
     };
 
-    div.textContent = item.nome + " - ";
     div.appendChild(select);
+    
     const btnRimuovi = document.createElement("button");
     btnRimuovi.textContent = "X";
     btnRimuovi.onclick = () => {
